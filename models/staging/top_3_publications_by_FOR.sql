@@ -1,10 +1,12 @@
+{{ config(materialized='table') }}
+
 SELECT *
 FROM
     (
         SELECT
-            title.preferred,
+            title.preferred as article_title,
             doi,
-            category.name,
+            category.name as FOR_category,
             RANK() OVER (PARTITION BY category.name ORDER BY metrics.times_cited DESC) as top_cited,
             metrics.times_cited as citation_count
         FROM   
