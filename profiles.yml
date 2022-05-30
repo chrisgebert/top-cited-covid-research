@@ -1,0 +1,22 @@
+top-cited-covid-research: 
+    target: dev
+    outputs:
+        dev:
+            type: bigquery
+            method: service-account
+            keyfile: "{{ env_var('KEYFILE_DEV') }}"
+            project: "{{ env_var('PROJECT_ID_DEV') }}"
+            dataset: "{{ env_var('DATASET_DEV') }}"
+            threads: 32
+            timeout_seconds: 300
+            priority: interactive
+        
+        prod:
+            type: bigquery
+            method: service-account
+            keyfile: "{{ env_var('KEYFILE_PROD') }}"
+            project: "{{ env_var('PROJECT_ID_PROD') }}"
+            dataset: "{{ env_var('DATASET_PROD') }}"
+            threads: 32
+            timeout_seconds: 300
+            priority: interactive

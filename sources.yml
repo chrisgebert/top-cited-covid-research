@@ -1,0 +1,15 @@
+
+version: 2
+
+sources:
+    - name: covid-19-dimensions
+      description: This dataset from Dimensions.a contains all published articles, preprints, clinical trials, grants and research datasets that are related to COVID-19. This growing collection of research information now amounts to hundreds of thousands of items, and it is the only dataset of its kind.
+      database: covid-19-dimensions-ai
+      schema: data
+      tables:
+        - name: clinical_trials
+        - name: datasets
+        - name: grants
+        - name: grid
+        - name: patents
+        - name: publications
