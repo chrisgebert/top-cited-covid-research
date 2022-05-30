@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+    - name: top_3_publications_by_FOR
+      description: 
+
+      columns:
+          - name: article_title
+            description: Title of publication
+            tests: 
+              - not_null
+          - name: doi
+            description: DOI of article
+          - name: FOR_category
+            description: Fields of Research classification
+          - name: top_cited
+            description: Rank of paper (1, 2, or 3)
+            tests:
+              - accepted_values:
+                  values: [1, 2, 3]
+          - name: citation_count
+            description: Number of citations
+          - name: date
+            description: Date of snapshot
