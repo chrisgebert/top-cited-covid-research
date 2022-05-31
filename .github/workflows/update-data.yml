@@ -1,8 +1,9 @@
 name: get-latest-publication-data
 
 on:
-  schedule:
-    - cron: '5 4 15 * *'  # runs on the 15th of every month
+  workflow_dispatch
+  # schedule:
+  #  - cron: '5 4 15 * *'  # runs on the 15th of every month
 
 jobs:
   build:
