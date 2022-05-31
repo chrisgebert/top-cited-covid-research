@@ -16,7 +16,7 @@ jobs:
     steps:
 
     - name: checkout repo content
-      uses: actions/checkout@2
+      uses: actions/checkout@v3
 
     # Configure Workload Identity Federation and generate an access token.
     - id: 'auth'
