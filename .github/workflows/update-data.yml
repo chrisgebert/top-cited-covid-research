@@ -28,7 +28,7 @@ jobs:
       with:
         token_format: 'id_token'
         workload_identity_provider: 'projects/604737188271/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-        service_account: SERVICE_ACCOUNT_EMAIL
+        service_account: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
         access_token_lifetime: '3600s'
     
     - name: setup python
