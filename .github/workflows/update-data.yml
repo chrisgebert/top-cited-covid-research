@@ -26,7 +26,7 @@ jobs:
       env:
         SERVICE_ACCOUNT_EMAIL: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
       with:
-        token_format: 'id_token'
+        # token_format: 'id_token'
         workload_identity_provider: 'projects/604737188271/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
         service_account: 'github-action@utility-emblem-658.iam.gserviceaccount.com'
         access_token_lifetime: '3600s'
